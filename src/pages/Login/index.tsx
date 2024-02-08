@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 import logoImg from '../../assets/logo.svg'
 import { Container } from '../../components/Container'
@@ -55,11 +56,16 @@ export function Login() {
       .then((user) => {
         console.log('LOGADO COM SUCESSO!')
         console.log('USER', user)
+
+        toast.success('Logado com sucesso!')
+
         navigate('/dashboard', { replace: true })
       })
       .catch((err) => {
         console.log('ERRO AO LOGAR')
         console.log(err)
+
+        toast.error('Erro ao fazer o login.')
       })
   }
 

@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -70,6 +71,8 @@ export function Register() {
           uid: user.user.uid,
         })
         console.log('CADASTRADO CO SUCESSO!')
+
+        toast.success('Bem vindo ao WebCarros!')
         navigate('/dashboard', { replace: true })
       })
       .catch((error) => {

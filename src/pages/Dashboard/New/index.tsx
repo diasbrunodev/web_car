@@ -1,5 +1,6 @@
 import { ChangeEvent, useState, useContext } from 'react'
 import { FiTrash, FiUpload } from 'react-icons/fi'
+import toast from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -10,13 +11,17 @@ import { DashboardHeader } from '../../../components/PanelHeader'
 import { Input } from '../../../components/Input'
 
 import { AuthContext } from '../../../contexts/AuthContext'
-import { storage } from '../../../services/firebaseConnection'
+import {
+  storage,
+  db,
+} from '../../../services/firebaseConnection'
 import {
   ref,
   uploadBytes,
   getDownloadURL,
   deleteObject,
 } from 'firebase/storage'
+import { addDoc, collection } from 'firebase/firestore'
 
 const schema = z.object({
   name: z.string().nonempty('O campo nome é obrigatório'),
@@ -106,11 +111,51 @@ export function New() {
         }
 
         setCarImages((images) => [...images, imageItem])
+
+        toast.success('Imagem cadastrada com sucesso!')
       })
     })
   }
 
   function onSubmit(data: FormData) {
+    if (carImages.length === 0) {
+      toast.error('Envie pelo menos 1 imagem.')
+      return
+    }
+
+    const carListImages = carImages.map((car) => {
+      return {
+        uid: car.uid,
+        name: car.name,
+        url: car.url,
+      }
+    })
+
+    addDoc(collection(db, 'cars'), {
+      name: data.name.toUpperCase(),
+      model: data.model,
+      whatsapp: data.whatsapp,
+      city: data.city,
+      year: data.year,
+      km: data.km,
+      price: data.price,
+      description: data.description,
+      created: new Date(),
+      owner: user?.name,
+      uid: user?.uid,
+      images: carListImages,
+    })
+      .then(() => {
+        reset()
+        setCarImages([])
+        console.log('CADATRADO COM SUCESSO', db)
+
+        toast.success('Carro cadastrado com sucesso!')
+      })
+      .catch((error) => {
+        console.log('ERRO AO CADASTRAR NO BANCO:', error)
+      })
+
     console.log('DATA', data)
   }
 
