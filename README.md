@@ -1,4 +1,4 @@
-# LinkTree
+![logo](./src/assets/logo.png)
 
 <hr>
 
@@ -21,31 +21,32 @@
 ## Descrição do projeto
 
 <p align="justify">
- Aplicação desenvolvida para a criação de links personalizados. O email e senha são cadastrados no Firebase, e após sua autenticação, permite que o usuário acesse a página admin, para criar seus links com endereço da url, nome do link, e permite também criar botões podendo navegar por opções de cores para estiliza-los, de forma bem simples, prática e intuitiva.
-
-![layout página principal](./src/images/main_page.png)
+ Projeto desenvolvido para a venda de automóveis, onde o usuário mediante a um cadastro e login, pode cadastrar seu veículo, com dados, imagens e seu contato. Ao cadastrar, seu veículo é exposto na página principal com seus dados.
+  
+![layout página principal](./src/assets/main_page.jpg)
 
 </p>
 
 ## Funcionalidades
 
-:heavy_check_mark: `Funcionalidade 1:` Autenticação do login pelo Firebase e uso do seu banco de dados.
+:heavy_check_mark: `Funcionalidade 1:` Site para venda de automóveis.
 
 :heavy_check_mark: `Funcionalidade 2:` Login e logout do usuário e proteção de rota.
 
-:heavy_check_mark: `Funcionalidade 3:` Formulário para inserir links e criar botões estilizados, cadastrando no banco de dados.
+:heavy_check_mark: `Funcionalidade 3:` Formulário para inserir dados e imagens dos veículos.
 
-:heavy_check_mark: `Funcionalidade 4:` Regras de acesso a alterações no banco de dados.
+:heavy_check_mark: `Funcionalidade 4:` Página de detalhes dos veículos com imagens expostas em slide.
 
 ## Layout
 
 <div align="center">
 
-![layout página de cadastro de links](./src/images/page2.png)
+![layout página](./src/assets/layout1.png)
+![layout página](./src/assets/layout2.png)
 
 ### Layout Responsivo
 
-<img style='width:200px;  margin-right: 20px' src='./src/images/cel.png' alt='layout responsivo para celular'><img style='width:200px' src='./src/images/cel2.png' alt='layout responsivo para celular'>
+<img style='width:200px;  margin-right: 20px' src='./src/assets/responsive1.png' alt='layout responsivo para celular'><img style='width:200px' src='./src/assets/responsive2.png' alt='layout responsivo para celular'>
 
   </div>
 
@@ -71,7 +72,7 @@
 
 ## Acesso ao projeto
 
-Você pode [acessar o site do projeto](https://dinamic-linktree.vercel.app/).
+Você pode [acessar o site do projeto](https://web-car-phi.vercel.app/login).
 
 ## Abrir e rodar o projeto
 
@@ -91,4 +92,4 @@ npm run dev
 
 ## Desenvolvedor
 
-[<img src="./src/icones/bruno.jpg" width=115><br><sub>Bruno Dias de Freitas</sub>](https://www.linkedin.com/in/brunodias-dev)
+[<img src="./src/assets/image_official.jpg" width=115><br><sub>Bruno Dias de Freitas</sub>](https://www.linkedin.com/in/brunodias-dev)
