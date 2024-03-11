@@ -72,7 +72,7 @@
 
 ## Acesso ao projeto
 
-Você pode [acessar o site do projeto](https://web-car-phi.vercel.app/login).
+Você pode [acessar o site do projeto](https://web-car-phi.vercel.app/).
 
 ## Abrir e rodar o projeto
 
