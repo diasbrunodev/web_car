@@ -42,11 +42,12 @@
 <div align="center">
 
 ![layout página](./src/assets/layout1.png)
+![layout página](./src/assets/layout.png)
 ![layout página](./src/assets/layout2.png)
 
 ### Layout Responsivo
 
-<img style='width:200px;  margin-right: 20px' src='./src/assets/responsive1.png' alt='layout responsivo para celular'><img style='width:200px' src='./src/assets/responsive2.png' alt='layout responsivo para celular'>
+<img style='width:200px;  margin-right: 20px' src='./src/assets/responsive.png' alt='layout responsivo para celular'> <img style='width:200px;  margin-right: 20px' src='./src/assets/responsive1.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/assets/responsive2.png' alt='layout responsivo para celular'>
 
   </div>
 
